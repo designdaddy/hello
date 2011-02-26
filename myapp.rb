@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 
 get '/hello/:user' do 
-  user = params[:user]
+  @user = params[:user]
   
-  "Hello " + user + "!"
+  erb :hello
 end
